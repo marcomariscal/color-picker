@@ -1,0 +1,6 @@
+.ColorPickerForm {
+  display: flex;
+  justify-content: center;
+  margin: 5rem;
+  padding: 5rem;
+}
