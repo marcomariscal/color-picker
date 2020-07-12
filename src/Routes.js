@@ -16,7 +16,11 @@ const Routes = () => {
   const renderColor = (props) => {
     const { name } = props.match.params;
     const color = colors.find((color) => color.name === name);
-    return <ColorPage {...props} color={color} history={history} />;
+    return color ? (
+      <ColorPage {...props} color={color} history={history} />
+    ) : (
+      <Redirect to="/color" />
+    );
   };
 
   return (
